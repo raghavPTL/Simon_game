@@ -87,7 +87,7 @@ function checkAnswer(currentLevel){
       }
       else
       {
-        $("#level-title").text("Game Over....");
+        $("#level-title").text("Game Over....score : "+(level-1));
         playSound("wrong");
 
 
@@ -99,7 +99,7 @@ function checkAnswer(currentLevel){
         console.log("wrong");
 
    setTimeout(function() {
-   $("#level-title").text("Game Over.... press on screen");
+   $("#level-title").text("Game Over.... press on screen to restart");
    startOver();
    }, 3000);
  
