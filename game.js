@@ -9,7 +9,7 @@ var level=0,lanswer=0;
 var started=true;
 
 
-$(document).keypress(function(){
+$(document).click(function(){
   if(started==true)
   {
      //$("#level-title").text("Level " + level);
@@ -18,7 +18,7 @@ $(document).keypress(function(){
     nextSequence();
     started=false;
  
-}, 1000);
+}, 500);
    
     
   }
@@ -87,7 +87,7 @@ function checkAnswer(currentLevel){
       }
       else
       {
-        $("#level-title").text("Game Over.... press any key to restart");
+        $("#level-title").text("Game Over....");
         playSound("wrong");
 
 
@@ -97,10 +97,17 @@ function checkAnswer(currentLevel){
  
 }, 300);
         console.log("wrong");
-        startOver();
+
+   setTimeout(function() {
+   $("#level-title").text("Game Over.... press on screen");
+   startOver();
+   }, 3000);
+ 
+        
       }
 
 }
+
 
 function startOver()
 {
